@@ -5,5 +5,21 @@
  */
 
 module.exports = {
-  __experimentalThemes: ['gatsby-theme-conference'],
+  siteMetadata: {
+    title: "UndergroundJS",
+    description:
+      "JavaScript conference hosted in Rocketown in Nashville on August 2nd 2019.",
+    twitter: "https://twitter.com/undergroundjs",
+    instagram: "",
+  },
+  __experimentalThemes: ["gatsby-theme-conference"],
+  plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-138176222-1",
+      },
+    },
+    "gatsby-plugin-netlify", // make sure to keep it last in the array
+  ],
 }
